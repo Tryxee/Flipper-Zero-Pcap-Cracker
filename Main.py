@@ -21,10 +21,8 @@ from time import sleep as wait
 def extract_eapol():
     """ Exécute le script pour extraire les EAPOL """
     try:
-        subprocess.run("python ./bin/extract-eapol.py", shell=True, check=True)
-        print("Extracting EAPOL...")
+        subprocess.run("cd bin && python extract-eapol.py", shell=True, check=True)
         wait(0.5)
-        print("EAPOL Extracted")
         return True
     except subprocess.CalledProcessError as e:
         print(f"Error during EAPOL extraction: {e}")
@@ -33,7 +31,7 @@ def extract_eapol():
 def convert_in_hc22000():
     """ Exécute le script pour convertir les fichiers en hc22000 """
     try:
-        subprocess.run("chmod +x ./bin/Convert-pcap-in-hc2200.sh && bash ./bin/Convert-pcap-in-hc2200.sh", shell=True, check=True)
+        subprocess.run("cd bin && chmod +x Convert-pcap-in-hc22000.sh && bash Convert-pcap-in-hc22000.sh", shell=True, check=True)
         wait(0.5)
         print("Conversion done!")
         return True
@@ -58,7 +56,7 @@ if __name__ == "__main__":
 
         print("\nAnalyzing your wordlists...")
         wordlist_dir = "./wordlists"
-        
+
         # Vérification que le dossier existe
         if not os.path.isdir(wordlist_dir):
             print(f"Error: The directory '{wordlist_dir}' does not exist.")
