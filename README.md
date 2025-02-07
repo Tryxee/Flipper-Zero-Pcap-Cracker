@@ -1,5 +1,5 @@
 # Flipper-Zero-Pcap-Cracker
-Crack automaticily your flipper zero pcap files from sniff pmkid (in dev)
+Crack automatically your flipper zero pcap files from sniff pmkid (in dev)
 
 Thanks to Z4ph0d42 for (Convert eapol in hc22000 file template) https://github.com/Z4ph0d42/Pcap-conversion-script
 
